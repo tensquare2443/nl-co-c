@@ -4,20 +4,6 @@ class Profile extends React.Component {
   render() {
 
     if (Array.isArray(this.props.profile)) {
-      // var newResults = [];
-      // for (var i = 0; i < this.props.profile.length; i++) {
-      //   for (var j = 0; j < newResults.length; j++) {
-      //     if (moment(this.props.profile[i].date) >= moment(newResults[j].date)) {
-      //       //splice and break
-      //       newResults.splice(j, 0, this.props.profile[i].date);
-      //       break;
-      //     }
-      //   }
-      //   if (i === 0) {
-      //     newResults.push(this.props.profile[i].date);
-      //   }
-      // }
-      // alert(JSON.stringify(newResults));
       var results = this.props.profile.map((result, index) => {
         var categories = result.categories.map((category, index) => {
           var last = result.categories.length - 1;

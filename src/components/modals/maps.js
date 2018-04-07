@@ -1,5 +1,4 @@
 import React from 'react';
-// import {mapsKey} from './../../clientvars';
 
 class Maps extends React.Component {
   render() {

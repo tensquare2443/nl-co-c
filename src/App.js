@@ -1,5 +1,3 @@
-//must do browser/other local storage.
-
 import React, {Component} from 'react';
 import './App.css';
 import axios from 'axios';
@@ -74,7 +72,6 @@ class App extends Component {
     if (sessionStorage.getItem('nlcoUser')) {
       alert(sessionStorage.getItem('nlcoUser'));
       alert(JSON.stringify(sessionStorage.getItem('nlcoUser')));
-      // this.setState()
     }
   }
 
@@ -248,7 +245,6 @@ class App extends Component {
     this.setState({logInForm});
   };
   createAccountSubmit = (e) => {
-    // e.preventDefault();
     var createAccountForm = JSON.parse(JSON.stringify(this.state.createAccountForm));
     var username = createAccountForm.username.value;
     var password = createAccountForm.password.value;
@@ -298,7 +294,6 @@ class App extends Component {
   };
 
   logInSubmit = (e) => {
-    // e.preventDefault();
     var logInForm = JSON.parse(JSON.stringify(this.state.logInForm));
     var username = logInForm.username.value;
     var password = logInForm.password.value;
@@ -457,7 +452,6 @@ class App extends Component {
           'distance',
           'attenders'
         ]);
-        //get number of people attending here.
         axios.post('https://nl-co-s-16.herokuapp.com/attend/view', {business: result.id}).then((response) => {
           if (response.data && Array.isArray(response.data) && response.data[0] && response.data[0].date) {
             result.attending = response.data;

@@ -26,36 +26,6 @@ class SearchResults extends React.Component {
           );
         }
       });
-      /*var starRating = () => {
-        var rating = [];
-        for (var i = 0; i < result.rating; i++) {
-          if (result.rating - i > 1) {
-            rating.push('full');
-          } else {
-            rating.push('half');
-          }
-        }
-        rating = rating.map((star) => {
-          if (star === 'full') {
-            return(
-              <svg style={{backgroundColor: "blue"}} fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24">
-                <path d="M0 0h24v24H0z" fill="none"/>
-                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-                <path d="M0 0h24v24H0z" fill="none"/>
-              </svg>
-            );
-          } else if (star === 'half') {
-            return(
-              <svg style={{backgroundColor: "blue"}} fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-                <defs><path d="M0 0h24v24H0V0z" id="a"/></defs>
-                <clipPath id="b"><use overflow="visible" xlinkHref="#a"/></clipPath>
-                <path clipPath="url(#b)" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/>
-              </svg>
-            );
-          } else return null;
-        });
-        return(<div>{rating}</div>);
-      };*/
       var lgPriceAndRating = () => {
         return (
           <div className="d-none d-sm-block">Price: {result.price}, Rating: {result.rating}</div>
@@ -118,10 +88,6 @@ class SearchResults extends React.Component {
                 <div className="d-flex justify-content-center justify-content-sm-start">
                   <h5 className="m-0 p-0">{result.name}</h5>
                 </div>
-
-                {/*<div style={{backgroundColor: "green"}} className="d-flex justify-content-center justify-content-sm-start align-items-center">
-                  {starRating()}
-                </div>*/}
 
                 <div className="d-flex justify-content-center justify-content-sm-start">
                   {lgPriceAndRating()}
