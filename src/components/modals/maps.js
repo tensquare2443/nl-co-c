@@ -3,6 +3,7 @@ import React from 'react';
 class Maps extends React.Component {
   render() {
     var mapsKey = process.env.MAPS_KEY;
+    alert(mapsKey);
     var mapsUrl = `https://www.google.com/maps/embed/v1/place?key=${mapsKey}&q=Space+Needle,Seattle+WA`;
 
     return(
