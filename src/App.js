@@ -500,6 +500,7 @@ class App extends Component {
   };
 
   render() {
+    alert(process.env.MAPS_KEY);
     return (
       <div className="container">
         <TopNav
