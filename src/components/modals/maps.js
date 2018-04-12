@@ -2,6 +2,8 @@ import React from 'react';
 
 class Maps extends React.Component {
   render() {
+    var name = this.props.chosenEvent.name;
+    var location = this.props.chosenEvent.location;
     alert(`name: ${name}`);
     alert(`location: ${location}`);
 
