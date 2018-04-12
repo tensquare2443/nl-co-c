@@ -68,12 +68,12 @@ class App extends Component {
     };
   }
 
-  componentWillMount() {
-    if (sessionStorage.getItem('nlcoUser')) {
-      alert(sessionStorage.getItem('nlcoUser'));
-      alert(JSON.stringify(sessionStorage.getItem('nlcoUser')));
-    }
-  }
+  // componentWillMount() {
+    // if (sessionStorage.getItem('nlcoUser')) {
+    //   alert(sessionStorage.getItem('nlcoUser'));
+    //   alert(JSON.stringify(sessionStorage.getItem('nlcoUser')));
+    // }
+  // }
 
   notGoing = (e) => {
     var index = e.currentTarget.dataset.id;
@@ -500,7 +500,6 @@ class App extends Component {
   };
 
   render() {
-    alert(process.env.MAPS_KEY);
     return (
       <div className="container">
         <TopNav

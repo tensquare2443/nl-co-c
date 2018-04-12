@@ -2,9 +2,11 @@ import React from 'react';
 
 class Maps extends React.Component {
   render() {
-    var mapsKey = process.env.MAPS_KEY;
-    alert(mapsKey);
-    var mapsUrl = "https://www.google.com/maps/embed/v1/place?key=AIzaSyDsacJUcDmoFdw5wke0xllZPs-ZpAUwSz0&q=Space+Needle,Seattle+WA";
+    alert(`name: ${name}`);
+    alert(`location: ${location}`);
+
+    // var mapsKey = process.env.MAPS_KEY;
+    var mapsUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDsacJUcDmoFdw5wke0xllZPs-ZpAUwSz0&q=${name},${location}`;
     return(
       <div className="custom-modal" tabIndex="-1" role="dialog">
         <div className="custom-modal-dialog custom-modal-lg" role="document">
