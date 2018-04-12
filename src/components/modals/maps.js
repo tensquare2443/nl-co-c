@@ -8,7 +8,7 @@ class Maps extends React.Component {
     alert(`location: ${JSON.stringify(location)}`);
 
     // var mapsKey = process.env.MAPS_KEY;
-    var mapsUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDsacJUcDmoFdw5wke0xllZPs-ZpAUwSz0&q=${name},${location}`;
+    var mapsUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDsacJUcDmoFdw5wke0xllZPs-ZpAUwSz0&q=${name},${location.city}+${location.state}`;
     return(
       <div className="custom-modal" tabIndex="-1" role="dialog">
         <div className="custom-modal-dialog custom-modal-lg" role="document">
