@@ -4,8 +4,6 @@ class Maps extends React.Component {
   render() {
     var name = this.props.chosenEvent.name.replace(/[&]/g, 'and');
     var location = this.props.chosenEvent.location;
-    alert(`name: ${name}`);
-    alert(`location: ${JSON.stringify(location)}`);
 
     // var mapsKey = process.env.MAPS_KEY;
     var mapsUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDsacJUcDmoFdw5wke0xllZPs-ZpAUwSz0&q=${name},${location.city}+${location.state}`;
