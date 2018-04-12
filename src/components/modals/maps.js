@@ -3,7 +3,7 @@ import React from 'react';
 class Maps extends React.Component {
   render() {
     var name = this.props.chosenEvent.name;
-    var location = this.props.chosenEvent.location;
+    var location = this.props.chosenEvent.location.replace(/[&]/g, 'and');
     alert(`name: ${name}`);
     alert(`location: ${JSON.stringify(location)}`);
 
