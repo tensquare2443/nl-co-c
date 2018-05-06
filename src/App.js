@@ -406,6 +406,7 @@ class App extends Component {
 
   searchFormSubmit = (e, offset) => {
     if (e) {
+      // alert(`error: ${e}`);
       e.preventDefault();
     }
 
@@ -413,6 +414,7 @@ class App extends Component {
     var location = searchForm.location.value;
 
     if (location.length < 1) {
+      // alert(`location.length less than 1. location: ${JSON.stringify(location)}`);
       searchForm.location.validity = 'is-invalid';
       searchForm.location.feedback = 'Must enter a location';
       this.setState({searchResults: false});
@@ -421,13 +423,17 @@ class App extends Component {
     }
 
     if (offset) {
+      // alert(`offset. location: ${JSON.stringify(location)}`);
       var params = `location=${location}&offset=${(offset.results.split("-")[0]/1) - 1}`;
     } else {
+      // alert(`no offset. location: ${JSON.stringify(location)}`);
       params = `location=${location}`;
     }
 
     axios.get(`https://nl-co-s-16.herokuapp.com/search?${params}`).then((response) => {
+      // alert('server get successful');
       if (response.data.error && response.data.error.code  === 'LOCATION_NOT_FOUND') {
+        // alert('location not found.');
         searchForm.location.validity = 'is-invalid';
         searchForm.location.feedback = 'Location not found';
         this.setState({searchResults: false});

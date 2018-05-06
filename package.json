@@ -17,6 +17,7 @@
     "request-promise": "^4.2.2"
   },
   "scripts": {
+    "prestart": "node server/server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
